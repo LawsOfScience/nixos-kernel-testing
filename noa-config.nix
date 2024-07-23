@@ -9,7 +9,7 @@ let
     hash = "sha256-Cnqg2RS/ii19aw2vN86c7PjdnUYJCK88noxaFwH5WmQ=";
   };
 
-  modDirVersion = "6.10";
+  modDirVersion = "6.10.0";
   version = "6.10-noa-config";
   pname = "t2-noa-config-test";
 
@@ -22,7 +22,7 @@ linuxManualConfig {
 
   src = runCommand "patched-source" {} ''
     cp -r ${fetchzip {
-      url = "mirror://kernel/linux/kernel/v6.x/linux-${modDirVersion}.tar.xz";
+      url = "mirror://kernel/linux/kernel/v6.x/linux-6.10.tar.xz";
       hash = "sha256-cWbH1/Ab3NqQJ1Gn/nX5koCcn1o1PexiMd5AXliNpDc=";
     }} $out
     chmod -R u+w $out
